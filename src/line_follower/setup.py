@@ -23,7 +23,10 @@ setup(
             'hello = line_follower.hello:main',
             'circle = line_follower.circle:main',
             'listener = line_follower.listener:main',
-            'go_to_center = line_follower.go_to_center:main'
+            'go_to_center = line_follower.go_to_center:main',
+            'line_detector = line_follower.line_detector:main',
+            'line_steering = line_follower.line_steering:main',
+
         ],
     },
 )
