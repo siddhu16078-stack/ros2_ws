@@ -15,7 +15,7 @@ def generate_launch_description():
 
     spawn = Node(
         package='ros_gz_sim', executable='create',
-        arguments=['-file', urdf, '-name', 'line_bot', '-z', '0.03'],
+        arguments=['-file', urdf, '-name', 'line_bot', '-z', '0.03', '-y', '0.05'],
         output='screen')
 
     bridge = Node(
