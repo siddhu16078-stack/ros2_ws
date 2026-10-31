@@ -9,6 +9,9 @@ import cv2
 class LineDetector(Node):
     def __init__(self):
         super().__init__('line_detector')
+        self.declare_parameter('roi_top', 0.0)     
+        self.declare_parameter('roi_bottom', 0.5)   
+        self.declare_parameter('threshold', 80)     
         self.create_subscription(Image, '/camera/image_raw', self.on_image, 10)
         self.error_pub = self.create_publisher(Float32, '/line/error', 10)
         self.debug_pub = self.create_publisher(Image, '/line/debug', 10)
@@ -23,13 +26,17 @@ class LineDetector(Node):
         _, mask = cv2.threshold(gray, 80, 255, cv2.THRESH_BINARY_INV)
 
         # 3. Only look at the lower half of the image (the part closest to the robot)
-        top = h // 2
-        roi = mask[top:, :]
+        thresh = self.get_parameter('threshold').value
+        _, mask = cv2.threshold(gray, thresh, 255, cv2.THRESH_BINARY_INV)
+
+        top = int(h * self.get_parameter('roi_top').value)
+        bottom = int(h * self.get_parameter('roi_bottom').value)
+        roi = mask[top:bottom, :]
 
         # 4. Find the centre of the white blob using image moments
         m = cv2.moments(roi)
         debug = frame.copy()
-        cv2.rectangle(debug, (0, top), (w - 1, h - 1), (0, 255, 0), 1)
+        cv2.rectangle(debug, (0, top), (w - 1, bottom - 1), (0, 255, 0), 1)
 
         if m['m00'] > 0:
             cx = int(m['m10'] / m['m00'])

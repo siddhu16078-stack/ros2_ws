@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+  <world name="line_world">
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <light type="directional" name="sun">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+    <model name="ground">
+      <static>true</static>
+      <link name="link">
+        <collision name="c">
+          <geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry>
+        </collision>
+        <visual name="v">
+          <geometry><plane><normal>0 0 1</normal><size>20 20</size></plane></geometry>
+          <material><ambient>1 1 1 1</ambient><diffuse>1 1 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg0">
+      <static>true</static>
+      <pose>0.0523 0.0027 0.0005 0 0 0.0524</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg1">
+      <static>true</static>
+      <pose>0.1562 0.0137 0.0005 0 0 0.1571</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg2">
+      <static>true</static>
+      <pose>0.2585 0.0354 0.0005 0 0 0.2618</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg3">
+      <static>true</static>
+      <pose>0.3579 0.0677 0.0005 0 0 0.3665</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg4">
+      <static>true</static>
+      <pose>0.4534 0.1102 0.0005 0 0 0.4712</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg5">
+      <static>true</static>
+      <pose>0.5439 0.1625 0.0005 0 0 0.5760</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg6">
+      <static>true</static>
+      <pose>0.6285 0.2239 0.0005 0 0 0.6807</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg7">
+      <static>true</static>
+      <pose>0.7061 0.2939 0.0005 0 0 0.7854</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg8">
+      <static>true</static>
+      <pose>0.7761 0.3715 0.0005 0 0 0.8901</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg9">
+      <static>true</static>
+      <pose>0.8375 0.4561 0.0005 0 0 0.9948</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg10">
+      <static>true</static>
+      <pose>0.8898 0.5466 0.0005 0 0 1.0996</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg11">
+      <static>true</static>
+      <pose>0.9323 0.6421 0.0005 0 0 1.2043</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg12">
+      <static>true</static>
+      <pose>0.9646 0.7415 0.0005 0 0 1.3090</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg13">
+      <static>true</static>
+      <pose>0.9863 0.8438 0.0005 0 0 1.4137</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg14">
+      <static>true</static>
+      <pose>0.9973 0.9477 0.0005 0 0 1.5184</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg15">
+      <static>true</static>
+      <pose>0.9973 1.0523 0.0005 0 0 1.6232</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg16">
+      <static>true</static>
+      <pose>0.9863 1.1562 0.0005 0 0 1.7279</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg17">
+      <static>true</static>
+      <pose>0.9646 1.2585 0.0005 0 0 1.8326</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg18">
+      <static>true</static>
+      <pose>0.9323 1.3579 0.0005 0 0 1.9373</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg19">
+      <static>true</static>
+      <pose>0.8898 1.4534 0.0005 0 0 2.0420</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg20">
+      <static>true</static>
+      <pose>0.8375 1.5439 0.0005 0 0 2.1468</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg21">
+      <static>true</static>
+      <pose>0.7761 1.6285 0.0005 0 0 2.2515</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg22">
+      <static>true</static>
+      <pose>0.7061 1.7061 0.0005 0 0 2.3562</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg23">
+      <static>true</static>
+      <pose>0.6285 1.7761 0.0005 0 0 2.4609</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg24">
+      <static>true</static>
+      <pose>0.5439 1.8375 0.0005 0 0 2.5656</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg25">
+      <static>true</static>
+      <pose>0.4534 1.8898 0.0005 0 0 2.6704</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg26">
+      <static>true</static>
+      <pose>0.3579 1.9323 0.0005 0 0 2.7751</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg27">
+      <static>true</static>
+      <pose>0.2585 1.9646 0.0005 0 0 2.8798</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg28">
+      <static>true</static>
+      <pose>0.1562 1.9863 0.0005 0 0 2.9845</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg29">
+      <static>true</static>
+      <pose>0.0523 1.9973 0.0005 0 0 3.0892</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg30">
+      <static>true</static>
+      <pose>-0.0523 1.9973 0.0005 0 0 -3.0892</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg31">
+      <static>true</static>
+      <pose>-0.1562 1.9863 0.0005 0 0 -2.9845</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg32">
+      <static>true</static>
+      <pose>-0.2585 1.9646 0.0005 0 0 -2.8798</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg33">
+      <static>true</static>
+      <pose>-0.3579 1.9323 0.0005 0 0 -2.7751</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg34">
+      <static>true</static>
+      <pose>-0.4534 1.8898 0.0005 0 0 -2.6704</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg35">
+      <static>true</static>
+      <pose>-0.5439 1.8375 0.0005 0 0 -2.5656</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg36">
+      <static>true</static>
+      <pose>-0.6285 1.7761 0.0005 0 0 -2.4609</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg37">
+      <static>true</static>
+      <pose>-0.7061 1.7061 0.0005 0 0 -2.3562</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg38">
+      <static>true</static>
+      <pose>-0.7761 1.6285 0.0005 0 0 -2.2515</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg39">
+      <static>true</static>
+      <pose>-0.8375 1.5439 0.0005 0 0 -2.1468</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg40">
+      <static>true</static>
+      <pose>-0.8898 1.4534 0.0005 0 0 -2.0420</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg41">
+      <static>true</static>
+      <pose>-0.9323 1.3579 0.0005 0 0 -1.9373</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg42">
+      <static>true</static>
+      <pose>-0.9646 1.2585 0.0005 0 0 -1.8326</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg43">
+      <static>true</static>
+      <pose>-0.9863 1.1562 0.0005 0 0 -1.7279</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg44">
+      <static>true</static>
+      <pose>-0.9973 1.0523 0.0005 0 0 -1.6232</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg45">
+      <static>true</static>
+      <pose>-0.9973 0.9477 0.0005 0 0 -1.5184</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg46">
+      <static>true</static>
+      <pose>-0.9863 0.8438 0.0005 0 0 -1.4137</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg47">
+      <static>true</static>
+      <pose>-0.9646 0.7415 0.0005 0 0 -1.3090</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg48">
+      <static>true</static>
+      <pose>-0.9323 0.6421 0.0005 0 0 -1.2043</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg49">
+      <static>true</static>
+      <pose>-0.8898 0.5466 0.0005 0 0 -1.0996</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg50">
+      <static>true</static>
+      <pose>-0.8375 0.4561 0.0005 0 0 -0.9948</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg51">
+      <static>true</static>
+      <pose>-0.7761 0.3715 0.0005 0 0 -0.8901</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg52">
+      <static>true</static>
+      <pose>-0.7061 0.2939 0.0005 0 0 -0.7854</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg53">
+      <static>true</static>
+      <pose>-0.6285 0.2239 0.0005 0 0 -0.6807</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg54">
+      <static>true</static>
+      <pose>-0.5439 0.1625 0.0005 0 0 -0.5760</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg55">
+      <static>true</static>
+      <pose>-0.4534 0.1102 0.0005 0 0 -0.4712</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg56">
+      <static>true</static>
+      <pose>-0.3579 0.0677 0.0005 0 0 -0.3665</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg57">
+      <static>true</static>
+      <pose>-0.2585 0.0354 0.0005 0 0 -0.2618</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg58">
+      <static>true</static>
+      <pose>-0.1562 0.0137 0.0005 0 0 -0.1571</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+    <model name="seg59">
+      <static>true</static>
+      <pose>-0.0523 0.0027 0.0005 0 0 -0.0524</pose>
+      <link name="link">
+        <visual name="v">
+          <geometry><box><size>0.1137 0.03 0.001</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
